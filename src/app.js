@@ -1,11 +1,15 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+function domainGenerator() {
+  let pron = ["the", "our", "my", "your", "their"];
+  let adje = ["great", "big", "dumb", "wet", "strong"];
+  let noun = ["jogger", "racoon", "squirrel", "pencil"];
+  let doma = [".com", ".tv", ".net", ".es", ".cl"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+  var pronRandom = pron[Math.floor(Math.random() * pron.length)];
+  var adjeRandom = adje[Math.floor(Math.random() * adje.length)];
+  var nounRandom = noun[Math.floor(Math.random() * noun.length)];
+  var domaRandom = doma[Math.floor(Math.random() * doma.length)];
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+  return `${pronRandom}${adjeRandom}${nounRandom}${domaRandom}`;
+}
+
+console.log(domainGenerator());
